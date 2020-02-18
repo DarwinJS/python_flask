@@ -1,0 +1,10 @@
+include:
+  - template: Auto-DevOps.gitlab-ci.yml
+test:
+  stage: test
+  image: python:3.7.2-slim
+  script:
+    - pip install pipenv --upgrade
+    - pipenv install --deploy --system
+    - pipenv run pytest
+
