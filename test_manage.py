@@ -9,4 +9,4 @@ def client():
         yield client
 def test_index(client):
     rv = client.get('/')
-    assert(rv.data.decode('UTF-8') == 'v2')
+    assert(rv.data.decode('UTF-8') == 'v1')
